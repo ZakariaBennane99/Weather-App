@@ -1,0 +1,315 @@
+html {
+    height: 100%;
+    background: rgb(22,86,121);
+    background: linear-gradient(0deg, rgba(22,86,121,1) 0%, rgba(94,203,237,1) 100%);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/************************************************ Search Bar At The Top ***********************************************/
+
+#search-bar {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    position: absolute;
+    align-items: center;
+    right: 0;
+    left: 0;
+    top: 5px;
+}
+
+input {
+    width: 25%;
+    height: 30px;
+    margin: 0;
+    color: #747474;
+    text-align: center;
+    outline: 0;
+    border: 3px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 2px 2px 10px -3px rgba(0,0,0,0.8);
+}
+
+input:focus {
+    border: 3px solid #c0c0c0;
+}
+
+::placeholder {
+    color: #acacac;
+    opacity: 0.6;
+}
+
+button {
+    height: 38px;
+    margin-left: 5px;
+    outline: 0;
+    border: 3px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #747474;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px -3px rgba(0,0,0,0.8);
+}
+
+button:hover {
+    border: 3px solid #c0c0c0;
+}
+
+/********************************************** Main Baord For The Current Day **************************************************/
+
+#main-board {
+    width: fit-content;
+    height: 400px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(230,230,230, 1) 70%);
+    box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    border-radius: 7px;
+    color: #747474;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight:500;
+    padding: 15px 20px;
+}
+
+#main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 105px;
+} 
+
+#wind-speed {
+    color: #047d9c;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+#degrees {
+    margin: 0px;
+    padding: 20px 15px 10px 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#deg {
+    padding-left: 30px;
+    font-size: 73px;
+}
+
+#city-humidity {
+    float: right;
+    padding-top: 30px;
+}
+
+#weather-details {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#weather-icon {
+    height: 110px;
+}
+
+#wind-direction {
+    width: 62px;
+}
+
+#wind-details {
+    text-align: center;
+    margin: 25px 30px 0px 40px;
+}
+
+#city {
+    font-size: 40px;
+    margin: 0px;
+}
+
+#day {
+    font-size: 35px;
+    margin: 0px;
+}
+
+#day-month {
+    font-size: 20px;
+    margin: 0px;
+}
+
+hr {
+    background-color: #747474;
+    height: 0.5px;
+    border: none;
+}
+
+/*************************************************** Switch Board ************************************************/
+
+#switch-board {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(230,230,230, 1) 70%);
+    box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    border-radius: 7px;
+    color: #747474;
+    width: 550px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    grid-area: 1/1/2/3;
+}
+
+#switch-board p {
+    padding-right: 15px;
+    margin: 10px;
+}
+
+
+/************************************************** The Switch ************************************************/ 
+.switch {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 30px;
+    padding: 3px;
+    margin: 0 10px 10px 0;
+    border-radius: 18px;
+    background: #b9b9b9;
+    cursor: pointer;
+    margin: 10px;
+}
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #047d9c;
+    border-radius: inherit;
+}
+.switch-label:before, .switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+}
+.switch-label:before {
+    content: attr(data-off);
+    font-size: 13px;
+    right: 11px;
+    color: #FFFFFF;
+}
+.switch-label:after {
+    content: attr(data-on);
+    font-size: 13px;
+    left: 11px;
+    color: #FFFFFF;
+}
+.switch-handle {
+    position: absolute;
+    top: 3.5px;
+    left: 3.5px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+    left: 74px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+/* Transition
+    ========================== */
+.switch-label, .switch-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+
+/************************************************* Mini Boards For The Icoming Days **************************************************/
+
+#mini-boards {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.incoming-days {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 33%, rgba(230,230,230, 1) 67%);
+    box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 7px 7px 10px -3px rgba(0,0,0,0.7);
+    border-radius: 7px;
+    color: #747474;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px 10px;
+}
+
+.incoming-days p {
+    font-size: larger;
+}
+
+.incoming-days img {
+    width: 50px;
+}
+
+
+/******************************************** Search + Suggestions ***************************************/
+
+.suggestions {
+    position: absolute;
+    top: 33px;
+    right: 40.5%;
+}
+
+.suggestions li {
+    background: white;
+    list-style: none;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin: 0px;
+    color: #747474;
+    z-index: 100;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.hl {
+    background: rgba(94,203,237,1);
+}

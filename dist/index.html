@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+  <div id="search-bar">
+    <input id="search-input" type="text" placeholder="City Only">
+    <ul class="suggestions">
+    </ul>
+    <button>Go!</button>
+  </div>
+  <div id="main">
+    <div id="main-board">
+      <p id="day"></p>
+      <hr>
+      <p id="day-month"></p>
+      <hr>
+      <p id="degrees"><img id="weather-icon" src=""><span id="deg"></span></p>
+      <div id="weather-details">
+        <div id="wind-details">
+          <img id="wind-direction" src="">
+          <p id="wind-speed"></p>
+        </div>
+        <div id="city-humidity">
+          <p id="city"></p>
+          <p id="humidity"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="mini-boards">
+      <div id="switch-board">
+        <p>Switch to Fahrenheit or Celsius</p>
+        <label class="switch">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label" data-on="&#176;C" data-off="&#176;F"></span> <span class="switch-handle"></span> </label>
+      </div>
+      <div class="incoming-days">
+        <p id="day1"></p>
+        <img id="imgsrc1" src="">
+        <p class="temp" id="temp1"></p>
+      </div>
+      <div class="incoming-days">
+        <p id="day2"></p>
+        <img id="imgsrc2" src="">
+        <p class="temp" id="temp2"></p>
+      </div>
+      <div class="incoming-days">
+        <p id="day3"></p>
+        <img id="imgsrc3" src="">
+        <p class="temp" id="temp3"></p>
+      </div>
+      <div class="incoming-days">
+        <p id="day4"></p>
+        <img id="imgsrc4" src="">
+        <p class="temp" id="temp4"></p>
+      </div>    
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
