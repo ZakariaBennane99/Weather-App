@@ -213,7 +213,7 @@ function renderUI (data) {
 
 const handleData = async (ct) => {
 
-    const path = 'http://api.openweathermap.org/data/2.5/forecast?q=' + ct + '&units=imperial&APPID=' + apiKey
+    const path = 'https://api.openweathermap.org/data/2.5/forecast?q=' + ct + '&units=imperial&APPID=' + apiKey
     const owmReq = fetch(path)
     .then((res) => {
         return res.json()})
